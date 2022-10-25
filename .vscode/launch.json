@@ -3,7 +3,8 @@
     // 悬停以查看现有属性的描述。
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [
+    "configurations":
+    [
         {
             "name": "g++.exe - 生成和调试活动文件",
             "type": "cppdbg",
@@ -11,11 +12,13 @@
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": false,  //这个指定是否需要开新的终端窗口，如果为false，倒是可以支持打印中文
+            //为true时C++代码中打印中文时会乱码
             "MIMode": "gdb",
-            "miDebuggerPath": "F:\\Environment\\mingw-w64\\mingw64\\bin\\gdb.exe",
+            "miDebuggerPath": "E:\\Environment\\mingw64\\bin\\gdb.exe",
+            //上面这一行替换成自己的路径，一般需要安装MinGw编译器或者其他编译器，然后把gdb.exe路径放进来，注意此处是两个反斜杠
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
